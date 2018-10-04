@@ -45,6 +45,13 @@
         "/data/blacklist/osm.txt"
       ]
     },
+    "csv": {
+      "datapath": "/data/csv",
+      "files": [],
+      "download": [
+        "https://raw.githubusercontent.com/pelias/transit/master/test/landmarks.csv"
+      ]
+    },
     "geonames": {
       "datapath": "/data/geonames",
       "countryCode": "ALL"
