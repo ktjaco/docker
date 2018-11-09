@@ -37,13 +37,13 @@ services:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   openstreetmap:
-    image: pelias/openstreetmap:master
+    image: pelias/openstreetmap:wof-neighbourhood-test
     container_name: pelias_openstreetmap
     volumes:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   openaddresses:
-    image: pelias/openaddresses:master
+    image: pelias/openaddresses:wof-neighbourhood-test
     container_name: pelias_openaddresses
     volumes:
       - "./pelias.json:/code/pelias.json"
@@ -55,7 +55,7 @@ services:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   polylines:
-    image: pelias/polylines:master
+    image: pelias/polylines:wof-neighbourhood-test
     container_name: pelias_polylines
     volumes:
       - "./pelias.json:/code/pelias.json"
@@ -70,7 +70,7 @@ services:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   pip:
-    image: pelias/pip-service:master
+    image: pelias/pip-service:wof-neighbourhood-test
     container_name: pelias_pip-service
     restart: always
     environment: [ "PORT=4200" ]
