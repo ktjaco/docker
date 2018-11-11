@@ -43,7 +43,7 @@ services:
       - "${DATA_DIR}:/data"
       - "./blacklist/:/data/blacklist"
   openstreetmap:
-    image: pelias/openstreetmap:master
+    image: pelias/openstreetmap:wof-neighbourhood-test
     container_name: pelias_openstreetmap
     user: "${DOCKER_USER}"
     volumes:
@@ -51,7 +51,7 @@ services:
       - "${DATA_DIR}:/data"
       - "./blacklist/:/data/blacklist"
   openaddresses:
-    image: pelias/openaddresses:master
+    image: pelias/openaddresses:wof-neighbourhood-test
     container_name: pelias_openaddresses
     user: "${DOCKER_USER}"
     volumes:
@@ -59,7 +59,7 @@ services:
       - "${DATA_DIR}:/data"
       - "./blacklist/:/data/blacklist"
   geonames:
-    image: pelias/geonames:master
+    image: pelias/geonames:wof-neighbourhood-test
     container_name: pelias_geonames
     user: "${DOCKER_USER}"
     volumes:
@@ -74,7 +74,7 @@ services:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   polylines:
-    image: pelias/polylines:master
+    image: pelias/polylines:wof-neighbourhood-test
     container_name: pelias_polylines
     user: "${DOCKER_USER}"
     volumes:
@@ -91,7 +91,7 @@ services:
       - "./pelias.json:/code/pelias.json"
       - "${DATA_DIR}:/data"
   pip:
-    image: pelias/pip-service:master
+    image: pelias/pip-service:wof-neighbourhood-test
     container_name: pelias_pip-service
     user: "${DOCKER_USER}"
     restart: always
